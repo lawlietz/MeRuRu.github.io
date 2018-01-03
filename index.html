@@ -23,16 +23,37 @@
 
         }
     </style>
+
+    <script>
+        var ispaly=false;
+            function playMusic () {
+              var  m= document.getElementById('music');
+                if(!ispaly)
+                {
+                    m.play();
+                    ispaly=true;
+                }
+                else
+                    {
+                        m.pause();
+                        ispaly=false;
+                    }
+            }
+    </script>
 </head>
 <body>
 
 <div  name="topWindow" >
-    <img src="img/Window1.jpg">
-    <a style="position: absolute;bottom: 12px;left: 20px" href="https://lawlietz.github.io" target="_self"><img src="img/jxlogo.png"></a>
+    <img src="img/Window1.jpg" onclick="">
+    <img src="img/play.png" style="position: absolute;top: 5px "  width="45" height="40" onclick="playMusic()">
+    <a id="splink" style="position: absolute;bottom: 12px;left: 20px" href="https://lawlietz.github.io" target="_self"><img src="img/jxlogo.png"></a>
+
 
 </div>
 <iframe src="Window.html" width="847px" height="540px" frameborder="no" scrolling="no" ></iframe>
 
-    <audio src="http://lawlietz-10002763.cossh.myqcloud.com/Chelsy.mp3" loop="loop" autoplay="autoplay"></audio>
+    <audio id="music" src="http://wfz-1251582993.cosgz.myqcloud.com/恋爱写真(Instrumental).mp3" loop="loop" preload="auto" ></audio>
+
+
 </body>
 </html>
